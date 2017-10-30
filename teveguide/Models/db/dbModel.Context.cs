@@ -13,10 +13,10 @@ namespace teveguide.Models.db
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TeveGuideEntities : DbContext
+    public partial class TeveGuideEntities2 : DbContext
     {
-        public TeveGuideEntities()
-            : base("name=TeveGuideEntities")
+        public TeveGuideEntities2()
+            : base("name=TeveGuideEntities2")
         {
         }
     
@@ -27,7 +27,5 @@ namespace teveguide.Models.db
     
         public virtual DbSet<tv_shows> tv_shows { get; set; }
         public virtual DbSet<users> users { get; set; }
-
-        public System.Data.Entity.DbSet<teveguide.Models.TvShow> TvShows { get; set; }
     }
 }

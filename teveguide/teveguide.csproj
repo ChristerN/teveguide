@@ -200,7 +200,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\TvShowsController.cs" />
+    <Compile Include="Controllers\tv_showsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -308,11 +308,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\TvShows\Create.cshtml" />
-    <Content Include="Views\TvShows\Delete.cshtml" />
-    <Content Include="Views\TvShows\Details.cshtml" />
-    <Content Include="Views\TvShows\Edit.cshtml" />
-    <Content Include="Views\TvShows\Index.cshtml" />
+    <Content Include="Views\tv_shows\Create.cshtml" />
+    <Content Include="Views\tv_shows\Delete.cshtml" />
+    <Content Include="Views\tv_shows\Details.cshtml" />
+    <Content Include="Views\tv_shows\Edit.cshtml" />
+    <Content Include="Views\tv_shows\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

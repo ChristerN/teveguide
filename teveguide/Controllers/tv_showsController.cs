@@ -6,112 +6,111 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using teveguide.Models;
 using teveguide.Models.db;
 
 namespace teveguide.Controllers
 {
-    public class TvShowsController : Controller
+    public class tv_showsController : Controller
     {
-        private TeveGuideEntities db = new TeveGuideEntities();
+        private TeveGuideEntities2 db = new TeveGuideEntities2();
 
-        // GET: TvShows
+        // GET: tv_shows
         public ActionResult Index()
         {
-            return View(db.TvShows.ToList());
+            return View(db.tv_shows.ToList());
         }
 
-        // GET: TvShows/Details/5
+        // GET: tv_shows/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TvShow tvShow = db.TvShows.Find(id);
-            if (tvShow == null)
+            tv_shows tv_shows = db.tv_shows.Find(id);
+            if (tv_shows == null)
             {
                 return HttpNotFound();
             }
-            return View(tvShow);
+            return View(tv_shows);
         }
 
-        // GET: TvShows/Create
+        // GET: tv_shows/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: TvShows/Create
+        // POST: tv_shows/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Starttime,Endtime,Substance,Category,Channel")] TvShow tvShow)
+        public ActionResult Create([Bind(Include = "Id,Title,Starttime,Endtime,Substance,Category,Channel")] tv_shows tv_shows)
         {
             if (ModelState.IsValid)
             {
-                db.TvShows.Add(tvShow);
+                db.tv_shows.Add(tv_shows);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(tvShow);
+            return View(tv_shows);
         }
 
-        // GET: TvShows/Edit/5
+        // GET: tv_shows/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TvShow tvShow = db.TvShows.Find(id);
-            if (tvShow == null)
+            tv_shows tv_shows = db.tv_shows.Find(id);
+            if (tv_shows == null)
             {
                 return HttpNotFound();
             }
-            return View(tvShow);
+            return View(tv_shows);
         }
 
-        // POST: TvShows/Edit/5
+        // POST: tv_shows/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Starttime,Endtime,Substance,Category,Channel")] TvShow tvShow)
+        public ActionResult Edit([Bind(Include = "Id,Title,Starttime,Endtime,Substance,Category,Channel")] tv_shows tv_shows)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tvShow).State = EntityState.Modified;
+                db.Entry(tv_shows).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(tvShow);
+            return View(tv_shows);
         }
 
-        // GET: TvShows/Delete/5
+        // GET: tv_shows/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TvShow tvShow = db.TvShows.Find(id);
-            if (tvShow == null)
+            tv_shows tv_shows = db.tv_shows.Find(id);
+            if (tv_shows == null)
             {
                 return HttpNotFound();
             }
-            return View(tvShow);
+            return View(tv_shows);
         }
 
-        // POST: TvShows/Delete/5
+        // POST: tv_shows/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            TvShow tvShow = db.TvShows.Find(id);
-            db.TvShows.Remove(tvShow);
+            tv_shows tv_shows = db.tv_shows.Find(id);
+            db.tv_shows.Remove(tv_shows);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
