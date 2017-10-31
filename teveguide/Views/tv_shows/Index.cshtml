@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<teveguide.Models.db.tv_shows>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "På teve just nu";
 }
 
 <h2>Index</h2>
@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Endtime)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Substance)
+            @*@Html.DisplayNameFor(model => model.Substance)*@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Category)
@@ -44,7 +44,7 @@
             @Html.DisplayFor(modelItem => item.Endtime)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Substance)
+            @*@Html.DisplayFor(modelItem => item.Substance)*@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Category)
