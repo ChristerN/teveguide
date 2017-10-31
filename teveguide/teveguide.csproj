@@ -313,6 +313,7 @@
     <Content Include="Views\tv_shows\Details.cshtml" />
     <Content Include="Views\tv_shows\Edit.cshtml" />
     <Content Include="Views\tv_shows\Index.cshtml" />
+    <Content Include="Views\Shared\_Puffar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
