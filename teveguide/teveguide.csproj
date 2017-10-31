@@ -201,6 +201,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\tv_showsController.cs" />
+    <Compile Include="Data\DbOperations.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -313,6 +314,7 @@
     <Content Include="Views\tv_shows\Details.cshtml" />
     <Content Include="Views\tv_shows\Edit.cshtml" />
     <Content Include="Views\tv_shows\Index.cshtml" />
+    <Content Include="Views\tv_shows\Startsida.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

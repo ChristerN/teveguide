@@ -1,0 +1,3 @@
+﻿SET IDENTITY_INSERT [dbo].[tv_shows] ON
+INSERT INTO [dbo].[tv_shows] ([Id], [Title], [Starttime], [Endtime], [Substance], [Category], [Channel]) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+SET IDENTITY_INSERT [dbo].[tv_shows] OFF

@@ -6,13 +6,23 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using teveguide.Models;
 using teveguide.Models.db;
+using teveguide.Data;
 
 namespace teveguide.Controllers
 {
     public class tv_showsController : Controller
     {
         private TeveGuideEntities2 db = new TeveGuideEntities2();
+
+
+
+        //public ActionResult Startsida()
+        //{
+           //var tvShow = db.GetTvShowNow();
+           //return View(db.tvShow.ToList());
+        //}
 
         // GET: tv_shows
         public ActionResult Index()
@@ -50,6 +60,7 @@ namespace teveguide.Controllers
         {
             if (ModelState.IsValid)
             {
+              
                 db.tv_shows.Add(tv_shows);
                 db.SaveChanges();
                 return RedirectToAction("Index");
