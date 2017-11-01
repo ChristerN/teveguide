@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using teveguide.Models;
 using teveguide.Models.db;
-using teveguide.Data;
+
 
 namespace teveguide.Controllers
 {
@@ -20,8 +20,8 @@ namespace teveguide.Controllers
 
         //public ActionResult Startsida()
         //{
-           //var tvShow = db.GetTvShowNow();
-           //return View(db.tvShow.ToList());
+        //    var tvShow = db.GetTvShowNow();
+        //    return View(db.tvShow.ToList());
         //}
 
         // GET: tv_shows
