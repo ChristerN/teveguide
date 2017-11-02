@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
+using System.Web.Mvc;
 using teveguide.Models.db;
 
 namespace teveguide.Data
@@ -9,14 +11,14 @@ namespace teveguide.Data
     public class tv_showsOperations
     {
         //private TeveGuideEntities2 db = new TeveGuideEntities2();
-
-
-        //public tv_shows GetPersonById(int id)
+        //protected void Page_Load(object sender, EventArgs e)
         //{
-        //    var result =db.FirstOrDefault(p => p.Id == 5);
 
-        //    return result;
+        //    using (TeveGuideEntities2 Data = new TeveGuideEntities2())
+        //    {
+        //        tv_shows Puff1 = Data.tv_shows.Single(tvs => tvs.Id == 12);
+        //        LabelReport.Text = Puff1.Title;
+        //    }
         //}
-
     }
 }
