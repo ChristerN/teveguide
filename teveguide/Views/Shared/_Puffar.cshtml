@@ -6,36 +6,67 @@
 
 <strong>Vi tipsar om dessa program</strong>
 <br />
-
-@*<p>
-        @Html.ActionLink("Create New", "Create")
-    </p>*@
-
-@*Testar att lägga in en länk till en specifik datapost*@
-
-
-
-
+ 
 <table class="table">
-   
+ <tr>
+     <td>
+         <!--Puff1-->
+         @foreach (var item in Model)
 
-        <tr>
-            <td>
+
+            {
+                if (item.Id == 1004)
+                {
+                 <strong>@Html.DisplayFor(modelItem => item.Title)</strong> <br />
+                 @Html.DisplayFor(modelItem => item.Substance) <br />
+                 @Html.DisplayFor(modelItem => item.Channel) <br />
+                 @Html.DisplayFor(modelItem => item.Starttime) <br />
+                 @Html.ActionLink("Mer info", "Details", new { id = item.Id })
+             }
+         }
+     </td>
 
 
-              @Html.ActionLink("Puff1", "Details", new { id = 12 })
 
-            </td>
+     <td>
+         <!--Puff2-->
+         @foreach (var item in Model)
 
-            <td>
-                @Html.ActionLink("Puff 2", "Details", new { id = 5 })
 
-            </td>
+            {
+                if (item.Id == 15)
+                {
+                 <strong>@Html.DisplayFor(modelItem => item.Title)</strong> <br />
+                     @Html.DisplayFor(modelItem => item.Substance) <br />
+                     @Html.DisplayFor(modelItem => item.Channel) <br />
+                     @Html.DisplayFor(modelItem => item.Starttime) <br />
+                     @Html.ActionLink("Mer info", "Details", new { id = item.Id })
+                }
+             }
+     </td>
 
-            <td>
-                @Html.ActionLink("Puff 3", "Details", new { id = 21 })
-            </td>
-            </tr>
+     <td>
+         <!--Puff3-->
+         @foreach (var item in Model)
 
+
+            {
+                if (item.Id == 11)
+                {
+                 <strong>@Html.DisplayFor(modelItem => item.Title)</strong> <br />
+                     @Html.DisplayFor(modelItem => item.Substance) <br />
+                     @Html.DisplayFor(modelItem => item.Channel) <br />
+                     @Html.DisplayFor(modelItem => item.Starttime) <br />
+                     @Html.ActionLink("Mer info", "Details", new { id = item.Id })
+                }
+            }
+     </td>
+
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Mer info", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>*@
+        </tr>
 </table>
 

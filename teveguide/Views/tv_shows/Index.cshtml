@@ -22,12 +22,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Starttime)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Endtime)
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Substance)*@
-        </th>
+            @Html.DisplayNameFor(model => model.Substance)
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Category)
         </th>
@@ -38,6 +38,7 @@
     </tr>
    
 @foreach (var item in Model) {
+    if(item.Starttime<DateTime.Now && item.Endtime>DateTime.Now) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
@@ -45,12 +46,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.Starttime)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Endtime)
         </td>
         <td>
-            @*@Html.DisplayFor(modelItem => item.Substance)*@
-        </td>
+            @Html.DisplayFor(modelItem => item.Substance)
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Category)
         </td>
@@ -63,6 +64,7 @@
             @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
         </td>
     </tr>
+    }
 }
 
 </table>
