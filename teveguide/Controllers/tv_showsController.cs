@@ -30,6 +30,11 @@ namespace teveguide.Controllers
             return View(db.tv_shows.ToList());
         }
 
+        public ActionResult MyPage()
+        {
+            return View(db.tv_shows.ToList());
+        }
+
         // GET: tv_shows/Details/5
         public ActionResult Details(int? id)
         {
