@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<teveguide.Models.db.tv_shows>
 @{
-    ViewBag.Title = "På TV om tre dagar";
+    ViewBag.Title = "På TV om fem dagar";
 }
 <h2>@ViewBag.Title</h2>
-<h3>@DateTime.Today.AddDays(3)</h3>
+<h3>@DateTime.Today.AddDays(5)</h3>
 
 <table class="table">
     <tr>
@@ -14,7 +14,7 @@
 
     @foreach (var item in Model)
     {
-        if (item.Starttime > DateTime.Today.AddDays(3) && item.Endtime < DateTime.Today.AddDays(4))
+        if (item.Starttime > DateTime.Today.AddDays(5) && item.Endtime < DateTime.Today.AddDays(6))
         {
             <tr>
                 <td>
@@ -31,5 +31,4 @@
     }
 
 </table>
-
 

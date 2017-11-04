@@ -320,6 +320,7 @@
     <Content Include="Views\Home\ThreeDaysFromNow.cshtml" />
     <Content Include="Views\Home\FourDaysFromNow.cshtml" />
     <Content Include="Views\Home\SixDaysFromNow.cshtml" />
+    <Content Include="Views\Home\FiveDaysFromNow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
