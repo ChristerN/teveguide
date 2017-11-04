@@ -285,9 +285,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Tomorrow.cshtml" />
+    <Content Include="Views\Home\TwoDaysFromNow.cshtml" />
+    <Content Include="Views\Home\Today.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -317,6 +317,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\tv_shows\CurrentTvTable.cshtml" />
     <Content Include="Views\tv_shows\MyPage.cshtml" />
+    <Content Include="Views\Home\ThreeDaysFromNow.cshtml" />
+    <Content Include="Views\Home\FourDaysFromNow.cshtml" />
+    <Content Include="Views\Home\SixDaysFromNow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
