@@ -1,18 +1,19 @@
 ﻿@model IEnumerable<teveguide.Models.db.tv_shows>
 @{
-    ViewBag.Title = "På TV imorgon";
+    ViewBag.Title = "På den här kanalen imorgon";
 }
 <h2>@ViewBag.Title</h2>
+
 <h3>@DateTime.Today.AddDays(1)</h3>
 
 <table class="table">
 
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Starttime)
+            @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.Starttime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Category)
@@ -24,10 +25,10 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Starttime)
+                    @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
+                    @Html.DisplayFor(modelItem => item.Starttime)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Category)
@@ -40,4 +41,11 @@
     }
 
 </table>
+
+<p>@Html.ActionLink("På den här kanalen i övermorgon", "InTwoDaysTvTable")</p>
+
+<p>@Html.ActionLink("På den här kanalen idag", "CurrentTvTable")</p>
+
+<p>@Html.ActionLink("Till startsidan", "Index")</p>
+
 

@@ -37,7 +37,61 @@ namespace teveguide.Controllers
 
             return View(currentChannel.ToList());
         }
-       
+
+        public ActionResult TomorrowTvTable(string channel)
+        {
+            var currentChannel = from c in db.tv_shows
+                                 where c.Channel.Contains(channel)
+                                 select c;
+
+            return View(currentChannel.ToList());
+        }
+
+        public ActionResult InTwoDaysTvTable(string channel)
+        {
+            var currentChannel = from c in db.tv_shows
+                                 where c.Channel.Contains(channel)
+                                 select c;
+
+            return View(currentChannel.ToList());
+        }
+
+        public ActionResult InThreeDaysTvTable(string channel)
+        {
+            var currentChannel = from c in db.tv_shows
+                                 where c.Channel.Contains(channel)
+                                 select c;
+
+            return View(currentChannel.ToList());
+        }
+
+        public ActionResult InFourDaysTvTable(string channel)
+        {
+            var currentChannel = from c in db.tv_shows
+                                 where c.Channel.Contains(channel)
+                                 select c;
+
+            return View(currentChannel.ToList());
+        }
+
+        public ActionResult InFiveDaysTvTable(string channel)
+        {
+            var currentChannel = from c in db.tv_shows
+                                 where c.Channel.Contains(channel)
+                                 select c;
+
+            return View(currentChannel.ToList());
+        }
+
+        public ActionResult InSixDaysTvTable(string channel)
+        {
+            var currentChannel = from c in db.tv_shows
+                                 where c.Channel.Contains(channel)
+                                 select c;
+
+            return View(currentChannel.ToList());
+        }
+
         public ActionResult MyPage()
         {
             return View(db.tv_shows.ToList());

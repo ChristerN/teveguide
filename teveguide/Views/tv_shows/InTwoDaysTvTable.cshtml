@@ -1,18 +1,19 @@
 ﻿@model IEnumerable<teveguide.Models.db.tv_shows>
 @{
-    ViewBag.Title = "På TV imorgon";
+    ViewBag.Title = "På den här kanalen i övermorgon";
 }
 <h2>@ViewBag.Title</h2>
-<h3>@DateTime.Today.AddDays(1)</h3>
+
+<h3>@DateTime.Today.AddDays(2)</h3>
 
 <table class="table">
 
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Starttime)
+            @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.Starttime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Category)
@@ -20,14 +21,14 @@
     </tr>
     @foreach (var item in Model)
     {
-        if (item.Starttime > DateTime.Today.AddDays(1) && item.Endtime < DateTime.Today.AddDays(2))
+        if (item.Starttime > DateTime.Today.AddDays(2) && item.Endtime < DateTime.Today.AddDays(3))
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Starttime)
+                    @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
+                    @Html.DisplayFor(modelItem => item.Starttime)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Category)
@@ -40,4 +41,10 @@
     }
 
 </table>
+
+<p>@Html.ActionLink("På den här kanalen om tre dagar", "InThreeDaysTvTable")</p>
+
+<p>@Html.ActionLink("På den här kanalen imorgon", "TomorrowTvTable")</p>
+
+<p>@Html.ActionLink("Till startsidan", "Index")</p>
 

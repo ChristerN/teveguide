@@ -321,6 +321,12 @@
     <Content Include="Views\Home\FourDaysFromNow.cshtml" />
     <Content Include="Views\Home\SixDaysFromNow.cshtml" />
     <Content Include="Views\Home\FiveDaysFromNow.cshtml" />
+    <Content Include="Views\tv_shows\TomorrowTvTable.cshtml" />
+    <Content Include="Views\tv_shows\InTwoDaysTvTable.cshtml" />
+    <Content Include="Views\tv_shows\InThreeDaysTvTable.cshtml" />
+    <Content Include="Views\tv_shows\InFourDaysTvTable.cshtml" />
+    <Content Include="Views\tv_shows\InFiveDaysTvTable.cshtml" />
+    <Content Include="Views\tv_shows\InSixDaysTvTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
