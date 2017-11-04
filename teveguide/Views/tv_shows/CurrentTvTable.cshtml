@@ -1,0 +1,26 @@
+﻿@model IEnumerable<teveguide.Models.db.tv_shows>
+@{
+    ViewBag.Title = "CurrentTvTable";
+}
+
+<h2>Veckans TV-tablå</h2>
+
+@foreach (var item in Model)
+{
+    //if (item.Starttime == DateTime.Today)
+    //{
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Starttime)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Title)
+            </td>
+        </tr>
+        <br />
+    @*}*@
+}
+<p>@Html.ActionLink("Back to List", "Index")</p>
+

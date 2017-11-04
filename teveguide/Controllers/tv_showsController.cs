@@ -16,8 +16,6 @@ namespace teveguide.Controllers
     {
         private TeveGuideEntities2 db = new TeveGuideEntities2();
 
-
-
         //public ActionResult Startsida()
         //{
         //    var tvShow = db.GetTvShowNow();
@@ -30,6 +28,16 @@ namespace teveguide.Controllers
             return View(db.tv_shows.ToList());
         }
 
+        //Get current Tv-table
+        public ActionResult CurrentTvTable(string channel)
+        {
+            var currentChannel = from c in db.tv_shows
+                                 where c.Channel.Contains(channel)
+                                 select c;
+
+            return View(currentChannel.ToList());
+        }
+       
         // GET: tv_shows/Details/5
         public ActionResult Details(int? id)
         {

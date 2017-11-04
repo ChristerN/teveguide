@@ -60,6 +60,7 @@
         </td>
         <td>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |*@
+            @Html.ActionLink("Dagens Tv-program på aktuell kanal", "CurrentTvTable", new { channel = item.Channel})<br />
             @Html.ActionLink("Mer info", "Details", new { id=item.Id }) @*|*@
             @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
         </td>
