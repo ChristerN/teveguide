@@ -30,6 +30,7 @@ namespace teveguide.Controllers
             return View(db.tv_shows.ToList());
         }
 
+        [Authorize]
         public ActionResult MyPage()
         {
             return View(db.tv_shows.ToList());
