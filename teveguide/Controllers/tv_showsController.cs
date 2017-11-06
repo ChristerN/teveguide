@@ -92,6 +92,8 @@ namespace teveguide.Controllers
             return View(currentChannel.ToList());
         }
 
+        [Authorize]
+
         public ActionResult MyPage()
         {
             return View(db.tv_shows.ToList());
